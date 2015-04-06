@@ -1,0 +1,39 @@
+{% if pagination.getLast() > 1 %}
+    <div class="pagination">
+        {% if pagination.getCurrent() != pagination.getFirst() %}
+            <span class="first">
+            <a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): pagination.getFirst()})) }}">&lt;&lt;</a>
+        </span>
+        {% endif %}
+
+        {% if pagination.getPrevious() %}
+            <span class="previous">
+            <a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): pagination.getPrevious()})) }}">&lt;</a>
+        </span>
+        {% endif %}
+
+        {% for page in pagination.getPagesInRange() %}
+            {% if page != pagination.getCurrent() %}
+                <span class="page">
+                <a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): page})) }}">{{ page }}</a>
+            </span>
+            {% else %}
+                <span class="current">{{ page }}</span>
+            {% endif %}
+
+        {% endfor %}
+
+        {% if pagination.getNext() %}
+            <span class="next">
+            <a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): pagination.getNext()})) }}">&gt;</a>
+        </span>
+        {% endif %}
+
+        {% if pagination.getCurrent() != pagination.getLast() %}
+            <span class="last">
+            <a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): pagination.getLast()})) }}">&gt;&gt;</a>
+        </span>
+        {% endif %}
+
+    </div>
+{% endif %}

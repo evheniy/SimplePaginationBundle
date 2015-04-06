@@ -1,0 +1,3 @@
+services:
+    pagination:
+        class: Evheniy\SimplePaginationBundle\Model\Service
