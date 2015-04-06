@@ -1,6 +1,6 @@
 {
     "name": "evheniy/simple-pagination-bundle",
-    "version": "1.0",
+    "version": "1.1",
     "description": "The SimplePaginationBundle adds the ability to use simple pagination in your application.",
     "keywords": ["Search", "Pagination", "Symfony2", "simple"],
     "type": "symfony-bundle",

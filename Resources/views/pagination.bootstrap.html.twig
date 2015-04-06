@@ -1,0 +1,46 @@
+{% if pagination.getLast() > 1 %}
+    <nav>
+        <ul class="pagination">
+        {% if pagination.getCurrent() != pagination.getFirst() %}
+            <li>
+                <a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): pagination.getFirst()})) }}" aria-label="First">
+                    <span aria-hidden="true">&lt;&lt;</span>
+                </a>
+            </li>
+        {% endif %}
+
+        {% if pagination.getPrevious() %}
+            <li>
+                <a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): pagination.getPrevious()})) }}" aria-label="Previous">
+                    <span aria-hidden="true">&lt;</span>
+                </a>
+            </li>
+        {% endif %}
+
+        {% for page in pagination.getPagesInRange() %}
+            {% if page != pagination.getCurrent() %}
+                <li><a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): page})) }}">{{ page }}</a></li>
+            {% else %}
+                <li class="active"><a href="#">{{ page }}<span class="sr-only">(current)</span></a></li>
+            {% endif %}
+
+        {% endfor %}
+
+        {% if pagination.getNext() %}
+            <li>
+                <a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): pagination.getNext()})) }}" aria-label="Next">
+                    <span aria-hidden="true">&gt;</span>
+                </a>
+            </li>
+        {% endif %}
+
+        {% if pagination.getCurrent() != pagination.getLast() %}
+            <li>
+                <a href="{{ path(pagination.getRoute(), pagination.getQuery()|merge({(pagination.getPageParameterName()): pagination.getLast()})) }}" aria-label="Last">
+                    <span aria-hidden="true">&gt;&gt;</span>
+                </a>
+            </li>
+        {% endif %}
+        </ul>
+    </nav>
+{% endif %}

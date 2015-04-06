@@ -10,10 +10,10 @@ class Service
 {
     /**
      * @param string $route
-     * @param int $count
-     * @param int $page
-     * @param int $size
-     * @param array $pageParameters
+     * @param int    $count
+     * @param int    $page
+     * @param int    $size
+     * @param array  $pageParameters
      *
      * @return Pagination
      */
