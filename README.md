@@ -7,6 +7,7 @@ SimplePaginationBundle
 
 This bundle provides the ability to use simple pagination in your Symfony2 application.
 
+
 Installation
 ------------
 
