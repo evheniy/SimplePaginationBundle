@@ -61,5 +61,5 @@ This bundle is under the MIT license. See the complete license in the bundle:
 [Demo][2]
 
 [1]:  http://makedev.org/articles/symfony/bundles/pagination_bundle.html
-[2]:  http://makedev.org/app_dev.php/search/?q=PHP
+[2]:  http://makedev.org/search/?q=PHP
 [3]:  https://github.com/evheniy/TwitterBootstrapBundle
