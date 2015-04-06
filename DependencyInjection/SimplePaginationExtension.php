@@ -29,6 +29,6 @@ class SimplePaginationExtension extends Extension
      */
     public function getAlias()
     {
-        return 'simple-pagination';
+        return 'simple_pagination';
     }
 }
