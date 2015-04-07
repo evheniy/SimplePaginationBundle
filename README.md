@@ -46,11 +46,11 @@ Layout for [Twitter Bootstrap][3]
 
     {% include "SimplePaginationBundle::pagination.bootstrap.html.twig" %}
 
-Or standard
+Or simple
 
     {% include "SimplePaginationBundle::pagination.html.twig" %}
 
-And styles for exaple like this
+And styles for example like this
 
     <style>
     .pagination {
