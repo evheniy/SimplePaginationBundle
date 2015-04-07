@@ -42,13 +42,73 @@ Controller
                 )
             );
 
-Layout
+Layout for [Twitter Bootstrap][3]
+
+    {% include "SimplePaginationBundle::pagination.bootstrap.html.twig" %}
+
+Or standard
 
     {% include "SimplePaginationBundle::pagination.html.twig" %}
 
-Or for [Twitter Bootstrap][3]
+And styles for exaple like this
 
-    {% include "SimplePaginationBundle::pagination.bootstrap.html.twig" %}
+    <style>
+    .pagination {
+        text-align: center;
+    }
+    .pagination span a {
+        display: inline-block;
+        padding: 4px 8px;
+        margin: 3px;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+    .pagination span a:hover {
+        color: #333;
+        text-decoration: none;
+    }
+    .pagination span a:active {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+    .pagination span.current {
+        display: inline-block;
+        padding: 4px 8px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        color: #333;
+        background-color: #fff;
+        border-color: #ccc;
+    }
+    </style>
 
 License
 -------
@@ -62,5 +122,5 @@ This bundle is under the MIT license. See the complete license in the bundle:
 [Demo][2]
 
 [1]:  http://makedev.org/articles/symfony/bundles/pagination_bundle.html
-[2]:  http://makedev.org/search/?q=PHP
+[2]:  http://makedev.org/search/?q=php+Composer+Symfony2+Google+phpunit
 [3]:  https://github.com/evheniy/TwitterBootstrapBundle

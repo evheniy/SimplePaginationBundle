@@ -82,6 +82,12 @@ class PaginationTest extends \PHPUnit_Framework_TestCase
             $this->pagination->getLast(),
             $this->pagination->getResultsCount() / 20
         );
+
+        $pagination = new Pagination('home', 10, 1, 10);
+        $this->assertEquals($pagination->getLast(), 1);
+
+        $pagination = new Pagination('home', 11, 1, 10);
+        $this->assertEquals($pagination->getLast(), 2);
     }
 
     /**
@@ -106,23 +112,17 @@ class PaginationTest extends \PHPUnit_Framework_TestCase
     public function testGetPagesInRange()
     {
         $this->assertEquals($this->pagination->getPagesInRange(), range(1, 10));
-    }
 
-    /**
-     *
-     */
-    public function testGetPagesInRangeLast()
-    {
         $pagination = new Pagination('home', 300, 20, 10);
         $this->assertEquals($pagination->getPagesInRange(), range(16, 25));
-    }
 
-    /**
-     *
-     */
-    public function testGetPagesInRangeSmall()
-    {
         $pagination = new Pagination('home', 40, 3, 10);
         $this->assertEquals($pagination->getPagesInRange(), range(1, 4));
+
+        $pagination = new Pagination('home', 110, 7, 10);
+        $this->assertEquals($pagination->getPagesInRange(), range(2, 11));
+
+        $pagination = new Pagination('home', 110, 4, 10);
+        $this->assertEquals($pagination->getPagesInRange(), range(1, 10));
     }
 } 
