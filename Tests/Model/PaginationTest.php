@@ -22,7 +22,7 @@ class PaginationTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->pagination = new Pagination('home', 200, 2, 20, array('q' => 'test'));
+        $this->pagination = new Pagination('home', 200, 2, 20, 5, array('q' => 'test'), 'page');
     }
 
     /**
@@ -95,7 +95,7 @@ class PaginationTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetPageParameterName()
     {
-        $this->assertEquals($this->pagination->getPageParameterName(), Pagination::PAGE_PARAMETER);
+        $this->assertEquals($this->pagination->getPageParameterName(), 'page');
     }
 
     /**
@@ -111,7 +111,8 @@ class PaginationTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetPagesInRange()
     {
-        $this->assertEquals($this->pagination->getPagesInRange(), range(1, 10));
+        $this->assertEquals($this->pagination->getPagesInRange(), range(1, 5));
+        $this->assertCount(5, $this->pagination->getPagesInRange());
 
         $pagination = new Pagination('home', 300, 20, 10);
         $this->assertEquals($pagination->getPagesInRange(), range(16, 25));

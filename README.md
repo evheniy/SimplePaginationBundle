@@ -33,12 +33,24 @@ AppKernel:
 Controller
 
     $pagination = $this->container->get('pagination');
+    $page = $request->get('page', 1);//page number
+    $size = $request->get('size', 10);//items per page
+    $range = 10;//navigation links on page 
+    $pageParameter = 'page';//the same: $page = $request->get($pageParameter, 1);
     
     return $this->render(
                 'AppBundle:Default:index.html.twig',
                 array(
                     ...
-                    'pagination'  => $pagination->paginate($request->get('_route'), $resultsCount, $page, $size, $request->query->all())
+                    'pagination'  => $pagination->paginate(
+                        $request->get('_route'),
+                        $resultsCount,
+                        $page,
+                        $size,
+                        $range,
+                        $request->query->all(),
+                        $pageParameter
+                    )
                 )
             );
 

@@ -3,7 +3,6 @@
 namespace Evheniy\SimplePaginationBundle\Tests\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Config\FileLocator;
 use Evheniy\SimplePaginationBundle\DependencyInjection\SimplePaginationExtension;
 
 /**
