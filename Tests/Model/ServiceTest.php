@@ -16,9 +16,10 @@ class ServiceTest extends \PHPUnit_Framework_TestCase
      */
     public function testPaginate()
     {
+        $service = new Service();
         $this->assertInstanceOf(
             '\Evheniy\SimplePaginationBundle\Model\Pagination',
-            (new Service())->paginate('home', 100)
+            $service->paginate('home', 100)
         );
     }
 } 

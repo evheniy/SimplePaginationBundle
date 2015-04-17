@@ -7,7 +7,7 @@ SimplePaginationBundle
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/evheniy/SimplePaginationBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/evheniy/SimplePaginationBundle/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/evheniy/SimplePaginationBundle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/evheniy/SimplePaginationBundle/build-status/master)
 
-
+[![Build Status](https://travis-ci.org/evheniy/SimplePaginationBundle.svg?branch=master)](https://travis-ci.org/evheniy/SimplePaginationBundle)
 
 This bundle provides the ability to use simple pagination in your Symfony2 application.
 
