@@ -5,6 +5,10 @@ SimplePaginationBundle
 
 [![Latest Stable Version](https://poser.pugx.org/evheniy/simple-pagination-bundle/v/stable.svg)](https://packagist.org/packages/evheniy/simple-pagination-bundle) [![Total Downloads](https://poser.pugx.org/evheniy/simple-pagination-bundle/downloads.svg)](https://packagist.org/packages/evheniy/simple-pagination-bundle) [![Latest Unstable Version](https://poser.pugx.org/evheniy/simple-pagination-bundle/v/unstable.svg)](https://packagist.org/packages/evheniy/simple-pagination-bundle) [![License](https://poser.pugx.org/evheniy/simple-pagination-bundle/license.svg)](https://packagist.org/packages/evheniy/simple-pagination-bundle)
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/evheniy/SimplePaginationBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/evheniy/SimplePaginationBundle/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/evheniy/SimplePaginationBundle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/evheniy/SimplePaginationBundle/build-status/master)
+
+
+
 This bundle provides the ability to use simple pagination in your Symfony2 application.
 
 
