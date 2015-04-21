@@ -129,9 +129,7 @@ And styles for example like this
 License
 -------
 
-This bundle is under the MIT license. See the complete license in the bundle:
-
-    Resources/meta/LICENSE
+This bundle is under the [MIT][4] license.
 
 [Документация на русском языке][1]
 
@@ -140,3 +138,4 @@ This bundle is under the MIT license. See the complete license in the bundle:
 [1]:  http://makedev.org/articles/symfony/bundles/pagination_bundle.html
 [2]:  http://makedev.org/search/?q=php+Composer+Symfony2+Google+phpunit
 [3]:  https://github.com/evheniy/TwitterBootstrapBundle
+[4]:  https://github.com/evheniy/SimplePaginationBundle/blob/master/Resources/meta/LICENSE
